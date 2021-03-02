@@ -2,15 +2,15 @@ package shop.repositories;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import shop.models.Customer;
+import shop.models.Product;
 import javax.persistence.EntityManagerFactory;
 
 @Component
-public class CustomerRepository extends EntityRepository {
+public class ProductRepository extends EntityRepository {
 
     @Autowired
-    public CustomerRepository(EntityManagerFactory factory) {
-        super(factory, Customer.class);
+    public ProductRepository(EntityManagerFactory factory) {
+        super(factory, Product.class);
     }
 
 }

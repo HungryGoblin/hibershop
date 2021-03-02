@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    !TEST! <br>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+        </tr>
+        </thead>
+        <p th:text="${message}">
+<!--        <tbody>-->
+<!--        <tr th:each="s : ${customers}">-->
+<!--            <td th:text="${s.id}"/>-->
+<!--            <td th:text="${s.name}"/>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+    </table>
+    #TEST#
+</body>
+</html>

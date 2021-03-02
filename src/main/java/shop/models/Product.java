@@ -1,19 +1,22 @@
-package shop.entities;
+package shop.models;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customer")
+@Table(name = "product")
 @Data
-public class Customer {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "title")
+    private String title;
+
+    @Column(name = "price")
+    private int price;
 
 }
