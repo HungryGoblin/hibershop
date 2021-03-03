@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>orders</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Заказы</h1>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Клиент</th>
+            <th>Продукт</th>
+            <th>Дата заказа</th>
+            <th>СУММА</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="s : ${custorders}">
+            <td th:text="${s.id}"/>
+            <td th:text="${s.customerId}"/>
+            <td th:text="${s.productId}"/>
+            <td th:text="${s.orderDate}"/>
+            <td th:text="${s.amount}"/>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
